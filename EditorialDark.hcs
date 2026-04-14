@@ -1,0 +1,528 @@
+Scheme: EditorialDark
+
+#include "basic_colors.inc"
+#include "NodeGraphDark.inc"
+
+#define MAIN                    #181818
+#define TESTCOLOR               #121212
+#define BG                      #151515
+#define RED                     1 0 0
+#define SELECTION               #2a2a2a
+#define LINES                   #262626
+#define NODETEXT                #cfcfcf
+#define DISPLAYFLG              #4d82ff
+#define NODECOMMENTTEXT         #cfcfcf
+#define HOUCOLOR                #ff4e00
+#define HOUCOLORSELECT          #ff8830
+#define HOUBYPASS               #6a2fff
+#define HOUCOLORSELECTNODE      #ff5e1a
+#define HOUCOLORSELECTNODESECONDARY  #ff7033
+#define HOUCOLORSELECTNODLAST   #ff2688
+#define WIRECUT                 #8a8a8a
+
+#define FLAGBGON                #3a3a3a
+#define FLAGBGOFF               #1f1f1f
+
+#define SLIDERBOT               #232323
+#define BUTTONS                 #232323
+
+#define DRKBASECLR	TESTCOLOR
+#define DRKBASE		TESTCOLOR
+#define DRKGRADHIGH	MAIN
+#define DRKGRADLOWCLR	TESTCOLOR
+#define DRKGRADLOW	TESTCOLOR
+#define DRKGRADMID	#1b1b1b
+#define DRKBORDER	#232323
+#define WELL		#0d0d0d
+#define LISTA		#121212
+#define LISTB		#151515
+
+#define UNK		1 0 1
+
+#define GREY(g)		g g g
+#define BLACK		GREY(0)
+#define WHITE		GREY(1)
+#define DARK		GREY(0.2)
+#define ARROW		GREY(0.52)
+#define PRESSED_ARROW	GREY(0.28)
+
+#define SHADOW1		GREY(0.773)
+#define SHADOW1_5	GREY(0.699)
+#define SHADOW2		GREY(0.63)
+#define SHADOW3		GREY(0.58)
+#define SHADOW3_5	GREY(0.51)
+#define SHADOW4		GREY(0.313)
+#define SHADOW5		GREY(0.15)
+
+#define PRESSED_HIGH	#2f2f2f
+#define PRESSED_LOW	#242424
+
+#define HELP_BG		1 1 0.88
+#define HELP_F1_BG	0.88 0.97 1
+
+#define SELECTION_BASE		#2a2a2a
+#define SELECTION_HIGHLIGHT2	#353535
+#define SELECTION_SHADOW	#1b1b1b
+
+#define ERROR			#b84a4a
+
+#define BASE_ALT		#151515
+#define EMPTY			DRKBASE
+
+#define TEXT			#cfcfcf
+#define TEXT_HIGHLIGHT          #f3f3f3
+
+#define EDIT_BG			#0c0c0c
+#define EDIT_BG_HIGHLIGHT	#242424
+#define EDIT_BG_OUTLINE		#1f1f1f
+
+#define GRAD_HI			DRKGRADHIGH
+#define GRAD_LOW		DRKGRADLOW
+
+#define BUTTON_DISABLE		#666666
+#define BUTTON_SEL		SELECTION_BASE
+#define BUTTON_PRESS		SELECTION_BASE
+
+IconBrightness:	.9
+IconContrast:	1
+IconGamma:	1
+IconSaturation: 1
+
+BackColor:		#121212
+
+ButtonGradHi:		#171717
+ButtonGradLow:		#171717
+ButtonNonActiveGradLow:	#171717
+
+ButtonShadowLight:	#1f1f1f
+ButtonShadowMed:	#1a1a1a
+ButtonShadowMedDark:	#121212
+ButtonShadowDark:	#090909
+ButtonShadow:		#050505
+ToolbarBevelLight:	#1a1a1a
+ToolbarBevelDark:	#090909
+ToolbarFlatGradHi:	#141414
+ToolbarFlatGradLo:	#141414
+
+DialogBlendBG:		DRKBASE
+
+ButtonText:		#d2d2d2
+ButtonHoverHighlight:	#5c5c5c
+ButtonPressedText:	#f3f3f3
+ButtonPressedText2:	#121212
+ButtonPressedGradHi:	#232323
+ButtonPressedGradLow:	#232323
+
+ButtonMenuArrowHi:	#1a1a1a
+ButtonMenuArrowLow:	#121212
+ButtonMenuArrow:	ARROW
+
+ButtonArrow:		ARROW
+ButtonArrowDisabled:	#484848
+ButtonArrowPressed:	PRESSED_ARROW
+ButtonArrowModified:	#151515
+
+TextColor:              #cfcfcf
+HiliteTextColor:        #f3f3f3
+HiliteTextBG:           #2a2a2a
+SecondaryText:          #7a7a7a
+LinkText:               #bcbcbc
+
+DropIndicator           0.0 0.0 1.0
+
+MenuBG:			#151515
+MenuTextDisabled:	#666666
+MenuTextHotkey:		#9a9a9a
+MenuHighlight:		#f3f3f3
+MenuShadow:		#121212
+MenuTextSelected:	#f3f3f3
+MenuSelectedBG:		#242424
+MenuTitleBG:		#181818
+InvertedMenuBackground:	GREY(0.8)
+
+Separator:		TESTCOLOR
+
+CheckBG:	BLACK
+CheckLocated:	WIRECUT
+CheckColor:	TEXT
+
+RadioBG:	#0d0d0d
+RadioBorder:	#646464
+RadioDot:	#d8d8d8
+RadioDotHighlight:	BUTTON_SEL
+
+TextboxBG:		#0c0c0c
+TextboxInvalidBG:	#7a2e2e
+TextboxBorderPrimary:	#1f1f1f
+TextboxBorderHighlight:	#252525
+TextboxBorderStippled:	#4a4a4a
+TextboxBorderKeyFocus:	#2d2d2d
+TextboxError:		ERROR
+TextboxGutter:		#101010
+TextboxDropMarker: 	#7a7a7a
+
+TextboxFeedbackFG:	#7a7a7a
+TextboxFeedbackBG:	UNK
+SelectedTextFG:		BLACK
+SelectedTextBG:		#2a2a2a
+SelectedTextDisabledBG: GREY(0.3)
+
+SliderTopBorder:	#4f4f4f
+SliderBottomBorder:	#232323
+SliderAdvancedBevel:	#4f4f4f
+SliderAdvancedGroove:	#121212
+SliderRemainingBevel:	#4f4f4f
+SliderRemainingGroove:	#121212
+SliderTick:		GREY(0.6)
+SliderTickLabel:        GREY(0.68)
+SliderRangeBrackets:	BLACK
+
+SliderThumbGradHi:	#232323
+SliderThumbGradLow:	#232323
+SliderThumbPressedGradHi:	PRESSED_HIGH
+SliderThumbPressedGradLow:	PRESSED_LOW
+SliderThumbTopBorder:	#141414
+SliderThumbTopBevel:	#282828
+SliderThumbBottomBevel:	#282828
+SliderThumbBottomBorder:	#141414
+SliderThumbRangeArrow:		#151515
+
+RangeSliderBackground:	#0d0d0d
+RangeSliderRect:	GREY(0.45)
+RangeSliderRectLocated:	GREY(0.60)
+RangeSliderRectSelected:GREY(0.90)
+RangeSliderArrow:	GREY(0.60)
+RangeSliderArrowLocated:	GREY(0.80)
+RangeSliderArrowSelected:GREY(0.95)
+
+LeverSliderBG:                  GREY(0.11)
+LeverSliderTopBevel:	        GREY(0.15)
+LeverSliderBottomBevel:         GREY(0.28)
+LeverSliderLeftBevel:	        GREY(0.16)
+LeverSliderRightBevel:          GREY(0.23)
+LeverSliderFilledBevelTop:      #2a2a2a
+LeverSliderFilled:              #353535
+LeverSliderFilledBevelBottom:   #1b1b1b
+LeverSliderTick:                GREY(0.16)
+
+LeverSliderValueText:           GREY(0.75)
+LeverSliderThumbText:           GREY(0.77)
+
+LeverSliderThumbTopBevel:       GREY(0.33)
+LeverSliderThumbBottomBevel:    GREY(0.10)
+LeverSliderThumbTopBorder:      GREY(0.18)
+LeverSliderThumbBottomBorder:   BLACK
+LeverSliderThumbGradBottom:     GREY(0.21)
+LeverSliderThumbGradTop:        GREY(0.33)
+LeverSliderThumbRangeArrow:     BLACK
+
+LeverSliderThumbPressedGradBottom:     PRESSED_HIGH
+LeverSliderThumbPressedGradTop:        PRESSED_LOW
+
+LadderBG:		EDIT_BG
+LadderText:		TEXT
+LadderHighlight:	SELECTION_BASE
+LadderOutline:		GREY(0.45)
+LadderShadow:		UNK
+
+ScrollbarUpperBorder:		DRKBASE
+ScrollbarBottomBorder:		BLACK
+ScrollbarWell:			WELL
+ScrollbarWellShadow1:		WELL
+ScrollbarWellShadow2:		WELL
+ScrollbarWellShadow3:		WELL
+ScrollbarWellShadowBlend12:	WELL
+ScrollbarWellShadowBlend13:	WELL
+ScrollbarWellShadowBlend22:	WELL
+ScrollbarWellShadowBlend23:	WELL
+ScrollbarWellShadowBlend32:	WELL
+ScrollbarWellShadowBlend33:	WELL
+
+ScrollbarThumbTopBorder:	DRKGRADHIGH
+ScrollbarThumbBottomBorder:	DRKGRADHIGH
+ScrollbarThumbBevel:		DRKBASE
+ScrollbarThumbGrippyBase:	BLACK
+ScrollbarThumbGrippyEdge:	BLACK
+
+ScrollbarButtonTopBorder:	DRKGRADHIGH
+ScrollbarButtonBottomBorder:	BLACK
+ScrollbarButtonBetweenBorder:	DRKBASE
+ScrollbarButtonBevel:		GREY(0.1)
+ScrollbarButtonArrow:		ARROW
+
+ScrollArrow:			ARROW
+ScrollArrowSelected:		BUTTON_SEL
+ScrollArrowDisabled:		DRKGRADMID
+
+ProgressMeterPercentLabelLeft:		BLACK
+ProgressMeterPercentLabelRight:		WHITE
+ProgressMeterTopBorder:			SHADOW3
+ProgressMeterBottomBorder:		SHADOW4
+ProgressMeterWellGradHi:		WELL
+ProgressMeterWellGradLo:		WELL
+ProgressMeterBevelTop:			WHITE
+ProgressMeterBevelBottom:		SELECTION_SHADOW
+ProgressMeterGradHi:			SELECTION_HIGHLIGHT2
+ProgressMeterGradLo:			SELECTION_BASE
+ProgressMeterText:			TEXT
+
+ListShadow:			TESTCOLOR
+ListHighlight:			TESTCOLOR
+ListBorder:			TESTCOLOR
+ListBG:				#121212
+ListEntry1:			#121212
+ListEntry2:			#151515
+ListEntrySelected:		#242424
+ListTitleShadow:		TESTCOLOR
+ListTitleHighlight:		TESTCOLOR
+ListTitleGradHi:		#151515
+ListTitleGradLow:		#151515
+ListTitleHighlightGradHi:	TESTCOLOR
+ListTitleHighlightGradLow:	TESTCOLOR
+ListTitleFilteredText:		TESTCOLOR
+ListText:			#cfcfcf
+ListAltText:			#d8d8d8
+ListHoverHighlight:		TESTCOLOR
+
+GalleryBackground: GREY(0.15)
+SnapshotGalleryBackground: BLACK
+
+SwitchButtonSelected: GREY(0.5)
+SwitchButtonLocated: GREY(0.2)
+
+HotkeyMgrUnboundActionFG:	SHADOW3
+
+SSBorder:	GREY(0.1)
+SSOutline:	DropIndicator
+SSHighlightAlpha:	0.25 0.55 0.0
+SSHeader:	GREY(0.29)
+
+GroupBorder:            DRKBORDER
+
+GroupHeader0:           BG
+GroupHeaderTop0:        BG
+GroupHeaderHi0:         LINES
+GroupHeaderHiTop0:      LINES
+GroupHeaderOpen0:       BUTTONS
+GroupHeaderOpenTop0:    BUTTONS
+GroupHeaderDisabled0:   BG
+GroupHeaderDisabledTop0:BG
+GroupBody0:             TESTCOLOR
+
+GroupHeader1:           BG
+GroupHeaderTop1:        BG
+GroupHeaderHi1:         LINES
+GroupHeaderHiTop1:      LINES
+GroupHeaderOpen1:       BG
+GroupHeaderOpenTop1:    BG
+GroupHeaderDisabled1:   BG
+GroupHeaderDisabledTop1:BG
+GroupBody1:             TESTCOLOR
+
+GroupHeader2:           BG
+GroupHeaderTop2:        BG
+GroupHeaderHi2:         LINES
+GroupHeaderHiTop2:      LINES
+GroupHeaderOpen2:       BG
+GroupHeaderOpenTop2:    BG
+GroupHeaderDisabled2:   BG
+GroupHeaderDisabledTop2:BG
+GroupBody2:             TESTCOLOR
+
+GroupHeader3:           BG
+GroupHeaderTop3:        BG
+GroupHeaderHi3:         LINES
+GroupHeaderHiTop3:      LINES
+GroupHeaderOpen3:       BG
+GroupHeaderOpenTop3:    BG
+GroupHeaderDisabled3:   BG
+GroupHeaderDisabledTop3:BG
+GroupBody3:             TESTCOLOR
+
+GroupLight:             TESTCOLOR
+
+InfoBG:		BLACK
+InfoText:	TEXT
+
+PopupHelpBG:		BLACK
+PopupHelpFG:		TEXT
+PopupHelpHotkeyFG:	SHADOW2
+PopupExtraHelpFG:	TEXT
+PopupExtraHelpBG:	#1c1c1c
+
+ShelfGradHi:		#151515
+ShelfGradMidHi:		#151515
+ShelfGradMidLow:	#151515
+ShelfGradLow:		#151515
+ShelfBG:		EMPTY
+ShelfEmptyBG:		#151515
+ShelfTabActiveHi:	#2a2a2a
+ShelfTabActiveLow:	#2a2a2a
+ShelfTabInactiveHi:	#181818
+ShelfTabInactiveLow:	#181818
+
+PaneTabActiveHi:	#2a2a2a
+PaneTabActiveLow:	#2a2a2a
+PaneTabInactiveHi:	#181818
+PaneTabInactiveLow:	#181818
+PaneTabEdges:		#151515
+PaneEmptyBG:		#141414
+PaneBorder:		TESTCOLOR
+PaneHeaderGradHi:	#141414
+PaneHeaderGradLow:	#141414
+PaneTabShadow:		#151515
+PaneTabMarker:		#151515
+
+PathGadgetArrow1:	#151515
+PathGadgetArrow2:	#151515
+PathGadgetArrow3:	#151515
+PathGadgetArrow1Selected:	#2a2a2a
+PathGadgetArrow2Selected:	#2a2a2a
+PathGadgetArrow3Selected:	#2a2a2a
+PathGadgetPrimaryBorder:	#151515
+PathGadgetSecondaryBorder:	#151515
+PathGadgetPrimaryBorderSelected:	#151515
+PathGadgetSecondaryBorderSelected:	#151515
+PathGadgetBevel:		#151515
+PathGadgetBevelSelected:	#151515
+PathGadgetText:		TEXT
+PathGadgetGradHi:	TESTCOLOR
+PathGadgetGradLow:	TESTCOLOR
+PathGadgetGradHiSelected:	LINES
+PathGadgetGradLowSelected:	LINES
+
+ViewportBorder:		DRKBASE
+ViewportDividers:	GREY(0.35)
+
+ImageViewportBorder:    GREY(0.2)
+ImageViewportBorderCurrent:     0.0 0.6 0.0
+
+TreeNodeBG:				LISTA
+TreeNodeAlternateBG:			LISTB
+TreeNodeSelectedBG:			SELECTION_BASE
+TreeNodeSelectedFG:			WHITE
+TreeNodeReservedParmFG:			SHADOW3
+TreeNodeInvisibleParmFG:		TEXT
+TreeNodeInvisibleReservedParmFG:	SHADOW3
+TreeLine:				#7a7a7a
+
+NodeConnectionDefaultBG:	#242424
+NodeConnectionTextBG:		#141414
+NodeConnectionGlow:		#2c2c2c
+NodeConnectionArrowLight:	#8a8a8a
+NodeConnectionArrowDark:	#666666
+NodeConnectionBevel:		#262626
+NodeConnectionTopBorder:	#1f1f1f
+NodeConnectionBottomBorder:	#1f1f1f
+
+NodeButtonGrad:			#151515
+NodeButtonSelectedGrad:		#202020
+NodeButtonBevel:		#1c1c1c
+NodeButtonBevelSelected:	#2a2a2a
+NodeSeparator:			#181818
+NodeSeparatorEnabled:		#262626
+NodeError:			#b84a4a
+NodeWarningBG:			#121212
+NodeWarningFG:			#c9a85a
+NodeDefaultBG:			#0e0e0e
+NodeHighlight:			#2a2a2a
+NodeDebugFG:			#cfcfcf
+
+NodeTemplateFlag:		#DD7DD7
+NodeSelectableTemplateFlag:	#B151BB
+NodeBypassFlag:			#6a2fff
+NodeRenderFlag:			#4d82ff
+NodeDisplayFlag:		#4d82ff
+NodeDisplayAndRenderFlag:	#00ADFF
+NodeOutputFlag:			#ff4e00
+NodeSelectableFlag:		#7a7a7a
+NodeExportFlag:			#8a8a8a
+NodeHiddenFlag:			#585858
+NodeAudioFlag:			#666666
+NodeThumbnailFlag:		#6a6a6a
+NodeLockFlag:			#8a5a5a
+NodeSoftLockFlag:		#7a7a5a
+NodeLoadedWithUnloadFlagOn:	#9a9a9a
+NodeDebugFlag:			#cfcfcf
+
+NetworkSelection:		#242424
+NetworkCurrent:			#2e2e2e
+NetworkCurrentNonSelected:	#dcdcdc
+NetworkBackground:		#0d0d0d
+NetworkDisplayHighlight:	#4a4a4a
+NetworkRenderHighlight:		#555555
+NetworkOutputHighlight:		#666666
+NetworkTemplateHighlight:	#707070
+NetworkLegacyHighlight:		#7a4a4a
+NetworkOverviewDragger:		#f3f3f3
+NetworkTimeDependent:		#6a6a6a
+
+NetworkGrid:			#202020
+
+NetworkWireNormal:		#7a7a7a
+NetworkWireActive:		#8a8a8a
+NetworkWireActiveLight:		#989898
+NetworkWireHighlight:		#b5b5b5
+NetworkWireShadow:		#030303
+NetworkWireExtraNormal:		#727272
+NetworkWireExtraActive:		#828282
+NetworkWireExtraActiveLight:	#929292
+NetworkWireIKNormal:		#727272
+NetworkWireIKActive:		#828282
+NetworkWireIKActiveLight:	#929292
+NetworkWireOutputOverrideNormal:	#cfcfcf
+NetworkWireOutputOverrideHighlight:	#f3f3f3
+NetworkWireTimeDepNormal:	#6a6a6a
+NetworkWireLoopBack:		#9a9a9a
+NetworkWirePassThrough:		#9a9a9a
+
+StatusBarMessageFG:	TEXT
+StatusBarMessageBG:	GREY(0.1)
+StatusBarPromptFG:	TEXT
+StatusBarPromptBG:	#2a2a2a
+StatusBarWarningFG:	TEXT
+StatusBarWarningBG:	#7a5a2a
+StatusBarErrorFG:	TEXT
+StatusBarErrorBG:	#8a3a3a
+
+ObjectColor:		HSV 210 0.03 1.02
+SopColor:		HSV 100 0.03 1.02
+DopColor:		HSV 0 0.03 1.02
+PopNetColor:		HSV 170 0.03 1.02
+PopColor:		HSV 170 0.03 1.02
+ShopColor:		HSV 340 0.03 1.02
+VopNetColor:		HSV 260 0.03 1.02
+VopColor:		HSV 260 0.03 1.02
+ChopNetColor:		HSV 60 0.03 1.02
+ChopColor:		HSV 60 0.03 1.02
+CopNet2Color:		HSV 40 0.03 1.02
+CopColor:		HSV 40 0.03 1.02
+Cop2Color:		HSV 40 0.03 1.02
+OutputColor:		HSV 20 0.03 1.02
+RootColor:		HSV 0 0 1
+
+ParmSyntaxPlainColor: #d8d8d8
+ParmSyntaxStringColor: #8fbf8f
+ParmSyntaxVarColor: #c9c27a
+ParmSyntaxFuncColor: #8fbaba
+ParmSyntaxKeywordColor: #b999c7
+ParmSyntaxQuoteColor: #8b95b8
+ParmSyntaxNumberColor: #c7aa6a
+ParmSyntaxRefColor: #b68f6a
+ParmSyntaxCommentColor: #7e7e7e
+ParmSyntaxErrorColor: #b84a4a
+ParmSyntaxTypeColor: #a8b8c8
+ParmSyntaxExtraColor: #9c7f6a
+
+TextboxLineNumberFG:	TEXT
+TextboxLineNumberBG:	DRKBASE
+TextboxLineNumberHighlight:	DRKGRADHIGH
+
+SplitBarBackground:	#151515
+SplitBarEdgeColor:	#1d1d1d
+SplitBarLightColor:	#181818
+SplitBarDarkColor:	#121212
+SplitBarPaneOutline:	#202020
+SplitBarGrippyColor:	#252525
+SplitBarHighlight:	#191919
+SplitBarHighlight2:	0.10 0.10 0.10
